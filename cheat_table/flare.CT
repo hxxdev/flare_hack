@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="45">
+  <CheatEntries>
+    <CheatEntry>
+      <ID>1</ID>
+      <Description>"PlayerPosx"</Description>
+      <VariableType>Float</VariableType>
+      <Address>"flare.exe"+00189750</Address>
+      <Offsets>
+        <Offset>3D0</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>2</ID>
+      <Description>"PlayerPosy"</Description>
+      <VariableType>Float</VariableType>
+      <Address>"flare.exe"+00189750</Address>
+      <Offsets>
+        <Offset>3CC</Offset>
+      </Offsets>
+    </CheatEntry>
+  </CheatEntries>
+  <UserdefinedSymbols/>
+</CheatTable>

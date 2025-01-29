@@ -1,14 +1,4 @@
 ﻿  main.cpp
-C:\Users\g1004\dev\flare\code\ExternalMemoryHack\main.cpp(58,10): warning C4477: 'printf' : format string '%s' requires an argument of type 'char *', but variadic argument 1 has type 'LPWSTR'
-      C:\Users\g1004\dev\flare\code\ExternalMemoryHack\main.cpp(58,10):
-      consider using '%ls' in the format string
-      C:\Users\g1004\dev\flare\code\ExternalMemoryHack\main.cpp(58,10):
-      consider using '%lls' in the format string
-      C:\Users\g1004\dev\flare\code\ExternalMemoryHack\main.cpp(58,10):
-      consider using '%Ls' in the format string
-      C:\Users\g1004\dev\flare\code\ExternalMemoryHack\main.cpp(58,10):
-      consider using '%ws' in the format string
-  
-C:\Users\g1004\dev\flare\code\ExternalMemoryHack\main.cpp(79,22): warning C4311: 'type cast': pointer truncation from 'HMODULE' to 'DWORD'
-C:\Users\g1004\dev\flare\code\ExternalMemoryHack\main.cpp(79,22): warning C4302: 'type cast': truncation from 'HMODULE' to 'DWORD'
+C:\Users\g1004\dev\flare\code\ExternalMemoryHack\main.cpp(93,27): warning C4100: 'argv': unreferenced formal parameter
+C:\Users\g1004\dev\flare\code\ExternalMemoryHack\main.cpp(93,14): warning C4100: 'argc': unreferenced formal parameter
   ExternalMemoryHack.vcxproj -> C:\Users\g1004\dev\flare\code\ExternalMemoryHack\x64\Debug\ExternalMemoryHack.exe
