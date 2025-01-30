@@ -1,0 +1,609 @@
+{
+ "comments": [
+  {
+   "module": "flare.exe",
+   "address": "0x213F5",
+   "manual": true,
+   "text": "playerpos(3), enemypos(3)"
+  },
+  {
+   "module": "flare.exe",
+   "address": "0x48885",
+   "manual": true,
+   "text": "playerpos(6)"
+  },
+  {
+   "module": "flare.exe",
+   "address": "0x6A4A8",
+   "manual": true,
+   "text": "playerposy(0), enemyposy(0)"
+  },
+  {
+   "module": "flare.exe",
+   "address": "0x4825D",
+   "manual": true,
+   "text": "playerpos(7)"
+  },
+  {
+   "module": "flare.exe",
+   "address": "0x6A4B0",
+   "manual": true,
+   "text": "playerposx(0), enemyposx(0)"
+  },
+  {
+   "module": "flare.exe",
+   "address": "0x214C7",
+   "manual": true,
+   "text": "playerposx(2), enemyposx(2)"
+  },
+  {
+   "module": "flare.exe",
+   "address": "0x6A3D6",
+   "manual": true,
+   "text": "playerposy(1), enemyposy(1)"
+  },
+  {
+   "module": "flare.exe",
+   "address": "0x6A3E1",
+   "manual": true,
+   "text": "playerposx(1), enemyposx(1)"
+  },
+  {
+   "module": "flare.exe",
+   "address": "0x21477",
+   "manual": true,
+   "text": "playerposy(2), enemyposy(2)"
+  },
+  {
+   "module": "flare.exe",
+   "address": "0xB8E7",
+   "manual": true,
+   "text": "playerpos(4)"
+  },
+  {
+   "module": "flare.exe",
+   "address": "0x9D90",
+   "manual": true,
+   "text": "playerpos(5)"
+  },
+  {
+   "module": "flare.exe",
+   "address": "0x2D3BA",
+   "manual": true,
+   "text": "enemypos(9)"
+  },
+  {
+   "module": "flare.exe",
+   "address": "0x29A36",
+   "manual": true,
+   "text": "enemypos(4)"
+  },
+  {
+   "module": "flare.exe",
+   "address": "0x2D3E2",
+   "manual": true,
+   "text": "enemypos(7)"
+  },
+  {
+   "module": "flare.exe",
+   "address": "0x2ACD5",
+   "manual": true,
+   "text": "enemypos(5)"
+  },
+  {
+   "module": "flare.exe",
+   "address": "0x1FCA0",
+   "manual": true,
+   "text": "enemypos(6)"
+  },
+  {
+   "module": "flare.exe",
+   "address": "0x2D3C7",
+   "manual": true,
+   "text": "enemypos(8)"
+  },
+  {
+   "module": "flare.exe",
+   "address": "0x4889E",
+   "manual": true,
+   "text": "enemypos(10)"
+  },
+  {
+   "module": "flare.exe",
+   "address": "0x48890",
+   "manual": true,
+   "text": "enemypos(11)"
+  }
+ ],
+ "labels": [
+  {
+   "module": "",
+   "address": "0x163D8E9EACC",
+   "manual": true,
+   "text": "posy"
+  },
+  {
+   "module": "",
+   "address": "0x163D8E9EAD0",
+   "manual": true,
+   "text": "posx"
+  }
+ ],
+ "breakpoints": [
+  {
+   "address": "0x9D90",
+   "enabled": false,
+   "oldbytes": "0x8949",
+   "type": 0,
+   "titantype": "0x0",
+   "name": "",
+   "module": "flare.exe",
+   "breakCondition": "",
+   "logText": "",
+   "logCondition": "",
+   "commandText": "",
+   "commandCondition": "",
+   "logFile": "",
+   "fastResume": false,
+   "silent": false
+  },
+  {
+   "address": "0xB8E7",
+   "enabled": false,
+   "oldbytes": "0x894C",
+   "type": 0,
+   "titantype": "0x0",
+   "name": "",
+   "module": "flare.exe",
+   "breakCondition": "",
+   "logText": "",
+   "logCondition": "",
+   "commandText": "",
+   "commandCondition": "",
+   "logFile": "",
+   "fastResume": false,
+   "silent": false
+  },
+  {
+   "address": "0x1FCA0",
+   "enabled": false,
+   "oldbytes": "0x8B48",
+   "type": 0,
+   "titantype": "0x0",
+   "name": "",
+   "module": "flare.exe",
+   "breakCondition": "",
+   "logText": "",
+   "logCondition": "",
+   "commandText": "",
+   "commandCondition": "",
+   "logFile": "",
+   "fastResume": false,
+   "silent": false
+  },
+  {
+   "address": "0x213F5",
+   "enabled": false,
+   "oldbytes": "0x8948",
+   "type": 0,
+   "titantype": "0x0",
+   "name": "",
+   "module": "flare.exe",
+   "breakCondition": "",
+   "logText": "",
+   "logCondition": "",
+   "commandText": "",
+   "commandCondition": "",
+   "logFile": "",
+   "fastResume": false,
+   "silent": false
+  },
+  {
+   "address": "0x21477",
+   "enabled": false,
+   "oldbytes": "0x8D48",
+   "type": 0,
+   "titantype": "0x0",
+   "name": "",
+   "module": "flare.exe",
+   "breakCondition": "",
+   "logText": "",
+   "logCondition": "",
+   "commandText": "",
+   "commandCondition": "",
+   "logFile": "",
+   "fastResume": false,
+   "silent": false
+  },
+  {
+   "address": "0x214C7",
+   "enabled": false,
+   "oldbytes": "0x8D4C",
+   "type": 0,
+   "titantype": "0x0",
+   "name": "",
+   "module": "flare.exe",
+   "breakCondition": "",
+   "logText": "",
+   "logCondition": "",
+   "commandText": "",
+   "commandCondition": "",
+   "logFile": "",
+   "fastResume": false,
+   "silent": false
+  },
+  {
+   "address": "0x29A36",
+   "enabled": false,
+   "oldbytes": "0x8B48",
+   "type": 0,
+   "titantype": "0x0",
+   "name": "",
+   "module": "flare.exe",
+   "breakCondition": "",
+   "logText": "",
+   "logCondition": "",
+   "commandText": "",
+   "commandCondition": "",
+   "logFile": "",
+   "fastResume": false,
+   "silent": false
+  },
+  {
+   "address": "0x2ACD5",
+   "enabled": false,
+   "oldbytes": "0x8948",
+   "type": 0,
+   "titantype": "0x0",
+   "name": "",
+   "module": "flare.exe",
+   "breakCondition": "",
+   "logText": "",
+   "logCondition": "",
+   "commandText": "",
+   "commandCondition": "",
+   "logFile": "",
+   "fastResume": false,
+   "silent": false
+  },
+  {
+   "address": "0x2D3BA",
+   "enabled": false,
+   "oldbytes": "0x8948",
+   "type": 0,
+   "titantype": "0x0",
+   "name": "",
+   "module": "flare.exe",
+   "breakCondition": "",
+   "logText": "",
+   "logCondition": "",
+   "commandText": "",
+   "commandCondition": "",
+   "logFile": "",
+   "fastResume": false,
+   "silent": false
+  },
+  {
+   "address": "0x2D3C7",
+   "enabled": false,
+   "oldbytes": "0x8B48",
+   "type": 0,
+   "titantype": "0x0",
+   "name": "",
+   "module": "flare.exe",
+   "breakCondition": "",
+   "logText": "",
+   "logCondition": "",
+   "commandText": "",
+   "commandCondition": "",
+   "logFile": "",
+   "fastResume": false,
+   "silent": false
+  },
+  {
+   "address": "0x2D3E2",
+   "enabled": false,
+   "oldbytes": "0x8B48",
+   "type": 0,
+   "titantype": "0x0",
+   "name": "",
+   "module": "flare.exe",
+   "breakCondition": "",
+   "logText": "",
+   "logCondition": "",
+   "commandText": "",
+   "commandCondition": "",
+   "logFile": "",
+   "fastResume": false,
+   "silent": false
+  },
+  {
+   "address": "0x4825D",
+   "enabled": false,
+   "oldbytes": "0x8B48",
+   "type": 0,
+   "titantype": "0x0",
+   "name": "",
+   "module": "flare.exe",
+   "breakCondition": "",
+   "logText": "",
+   "logCondition": "",
+   "commandText": "",
+   "commandCondition": "",
+   "logFile": "",
+   "fastResume": false,
+   "silent": false
+  },
+  {
+   "address": "0x48885",
+   "enabled": false,
+   "oldbytes": "0x8B48",
+   "type": 0,
+   "titantype": "0x0",
+   "name": "",
+   "module": "flare.exe",
+   "breakCondition": "",
+   "logText": "",
+   "logCondition": "",
+   "commandText": "",
+   "commandCondition": "",
+   "logFile": "",
+   "fastResume": false,
+   "silent": false
+  },
+  {
+   "address": "0x48890",
+   "enabled": false,
+   "oldbytes": "0x8B48",
+   "type": 0,
+   "titantype": "0x0",
+   "name": "",
+   "module": "flare.exe",
+   "breakCondition": "",
+   "logText": "",
+   "logCondition": "",
+   "commandText": "",
+   "commandCondition": "",
+   "logFile": "",
+   "fastResume": false,
+   "silent": false
+  },
+  {
+   "address": "0x4889E",
+   "enabled": false,
+   "oldbytes": "0x8B48",
+   "type": 0,
+   "titantype": "0x0",
+   "name": "",
+   "module": "flare.exe",
+   "breakCondition": "",
+   "logText": "",
+   "logCondition": "",
+   "commandText": "",
+   "commandCondition": "",
+   "logFile": "",
+   "fastResume": false,
+   "silent": false
+  },
+  {
+   "address": "0x6A3D6",
+   "enabled": false,
+   "oldbytes": "0x8948",
+   "type": 0,
+   "titantype": "0x0",
+   "name": "",
+   "module": "flare.exe",
+   "breakCondition": "",
+   "logText": "",
+   "logCondition": "",
+   "commandText": "",
+   "commandCondition": "",
+   "logFile": "",
+   "fastResume": false,
+   "silent": false
+  },
+  {
+   "address": "0x6A3E1",
+   "enabled": false,
+   "oldbytes": "0x894C",
+   "type": 0,
+   "titantype": "0x0",
+   "name": "",
+   "module": "flare.exe",
+   "breakCondition": "",
+   "logText": "",
+   "logCondition": "",
+   "commandText": "",
+   "commandCondition": "",
+   "logFile": "",
+   "fastResume": false,
+   "silent": false
+  },
+  {
+   "address": "0x6A4A8",
+   "enabled": false,
+   "oldbytes": "0xFF3",
+   "type": 0,
+   "titantype": "0x0",
+   "name": "",
+   "module": "flare.exe",
+   "breakCondition": "",
+   "logText": "",
+   "logCondition": "",
+   "commandText": "",
+   "commandCondition": "",
+   "logFile": "",
+   "fastResume": false,
+   "silent": false
+  },
+  {
+   "address": "0x6A4B0",
+   "enabled": false,
+   "oldbytes": "0xFF3",
+   "type": 0,
+   "titantype": "0x0",
+   "name": "",
+   "module": "flare.exe",
+   "breakCondition": "",
+   "logText": "",
+   "logCondition": "",
+   "commandText": "",
+   "commandCondition": "",
+   "logFile": "",
+   "fastResume": false,
+   "silent": false
+  },
+  {
+   "address": "0x24D3ABB37FC",
+   "enabled": true,
+   "type": 1,
+   "titantype": "0x58",
+   "name": "",
+   "module": "",
+   "breakCondition": "",
+   "logText": "",
+   "logCondition": "",
+   "commandText": "",
+   "commandCondition": "",
+   "logFile": "",
+   "fastResume": false,
+   "silent": false
+  }
+ ],
+ "watch": [
+  {
+   "Expression": "RDX==163D8E9EACC",
+   "Name": "playerposy(1)",
+   "DataType": "uint",
+   "WatchdogMode": "IsTrue"
+  },
+  {
+   "Expression": "R8==163D8E9EAD0",
+   "Name": "playerposx(1)",
+   "DataType": "uint",
+   "WatchdogMode": "IsTrue"
+  },
+  {
+   "Expression": "RBX==163D8E9E700",
+   "Name": "playerpos(2)",
+   "DataType": "uint",
+   "WatchdogMode": "IsTrue"
+  },
+  {
+   "Expression": "RCX==163D8E9E700",
+   "Name": "playerpos(3)",
+   "DataType": "uint",
+   "WatchdogMode": "Disabled"
+  },
+  {
+   "Expression": "R13==163D8E9E700",
+   "Name": "playerpos(4)",
+   "DataType": "uint",
+   "WatchdogMode": "IsTrue"
+  },
+  {
+   "Expression": "RCX==163D8E9E700",
+   "Name": "playerpos(5)",
+   "DataType": "uint",
+   "WatchdogMode": "Disabled"
+  },
+  {
+   "Expression": "[RDI]==163D8E9E700",
+   "Name": "playerpos(6)",
+   "DataType": "uint",
+   "WatchdogMode": "IsTrue"
+  },
+  {
+   "Expression": "RSI==163E8E9EACC",
+   "Name": "playerposy(0)",
+   "DataType": "uint",
+   "WatchdogMode": "Disabled"
+  },
+  {
+   "Expression": "RBX==163E8E9EAD0",
+   "Name": "playerposx(0)",
+   "DataType": "uint",
+   "WatchdogMode": "Disabled"
+  },
+  {
+   "Expression": "RSI==00000163D6D6C20C",
+   "Name": "enemyposy(0)",
+   "DataType": "uint",
+   "WatchdogMode": "Disabled"
+  },
+  {
+   "Expression": "R8==00000163D6D6C210",
+   "Name": "enemyposx(1)",
+   "DataType": "uint",
+   "WatchdogMode": "Disabled"
+  },
+  {
+   "Expression": "RDX==00000163D6D6C210",
+   "Name": "enemyposy(1)",
+   "DataType": "uint",
+   "WatchdogMode": "Disabled"
+  },
+  {
+   "Expression": "RBX==00000163D6D6C210",
+   "Name": "enemyposx(0)",
+   "DataType": "uint",
+   "WatchdogMode": "Disabled"
+  },
+  {
+   "Expression": "RBX==00000163D6D6BE40",
+   "Name": "enemypos(2)",
+   "DataType": "uint",
+   "WatchdogMode": "Disabled"
+  },
+  {
+   "Expression": "RCX==00000163D6D6BE40",
+   "Name": "enemypos(3)",
+   "DataType": "uint",
+   "WatchdogMode": "Disabled"
+  },
+  {
+   "Expression": "RBX==00000163D9032380",
+   "Name": "enemypos(4)",
+   "DataType": "uint",
+   "WatchdogMode": "Disabled"
+  },
+  {
+   "Expression": "RCX==00000163D9033E30 | RCX==00000163D9033A40 | RCX==00000163D90345A0",
+   "Name": "enemypos(5)",
+   "DataType": "uint",
+   "WatchdogMode": "Disabled"
+  },
+  {
+   "Expression": "RCX==00000163D9323E90 | RCX==00000163DC8D3010 | RCX==00000163DC94E740",
+   "Name": "enemypos(6)",
+   "DataType": "uint",
+   "WatchdogMode": "Disabled"
+  },
+  {
+   "Expression": "RBX==00000163D8FD1370 | RBX==00000163D8FD1378 | RBX==00000163D8FD1380",
+   "Name": "enemypos(7)",
+   "DataType": "uint",
+   "WatchdogMode": "Disabled"
+  },
+  {
+   "Expression": "RSI==00000163D6F42CB0",
+   "Name": "enemypos(8)",
+   "DataType": "uint",
+   "WatchdogMode": "Disabled"
+  },
+  {
+   "Expression": "RCX==00000163D6F42CB0",
+   "Name": "enemypos(9)",
+   "DataType": "uint",
+   "WatchdogMode": "Disabled"
+  },
+  {
+   "Expression": "RBX==00007FF761F59730",
+   "Name": "enemypos(10)",
+   "DataType": "uint",
+   "WatchdogMode": "Disabled"
+  }
+ ],
+ "hashAlgorithm": "murmurhash",
+ "hash": "0xF67CDB9350B0AA2"
+}
