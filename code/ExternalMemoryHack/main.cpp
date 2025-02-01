@@ -3,137 +3,54 @@
 #endif
 
 #include <Windows.h>
-#include <iostream>
-#include <psapi.h>
 #include <fcntl.h>
-#include <io.h>
+#include <stdio.h>
 #include <string>
+#include "basic_tool.h"
+#include "process_manager.h"
 
 using namespace std;
 
-void AssertError(LPCWSTR ErrorMessage) {
-	int msgboxID = MessageBox(
-		NULL,
-		ErrorMessage,
-		(LPCWSTR)L"Error",
-		MB_ICONWARNING | MB_OK | MB_DEFBUTTON1
-	);
-	switch (msgboxID) {
-	case IDOK:
-		// TODO: add code
-		break;
-	}
-	return;
-}
-
-void HandleError() {
-	DWORD ErrorCode = GetLastError();
-	LPWSTR message = nullptr;
-
-	if (ErrorCode == 0) {
-		wprintf(L"No error to handle.\n");
-		return;
-	}
-
-	if (!FormatMessage(FORMAT_MESSAGE_FROM_SYSTEM |
-					   FORMAT_MESSAGE_ALLOCATE_BUFFER,
-					   nullptr,
-					   ErrorCode,
-					   MAKELANGID(LANG_ENGLISH, SUBLANG_ENGLISH_US),
-					   (LPWSTR) &message,
-					   0,
-					   nullptr)) {
-		wprintf(L"Format message failed with code 0x%x\n", GetLastError());
-		return;
-	}
-
-	if (message) {
-		wcout << message << endl;
-		LocalFree(message);
-	}
-	return;
-}
-
-HMODULE getModule(HANDLE processHandle) {
-	HMODULE hMods[1024];
-	DWORD cbNeeded;
-	unsigned int i;
-
-	if (EnumProcessModulesEx(processHandle, hMods, sizeof(hMods), &cbNeeded, LIST_MODULES_64BIT))
-	{
-		for (i = 0; i < (cbNeeded / sizeof(HMODULE)); i++)
-		{
-			TCHAR szModName[MAX_PATH];
-			if (GetModuleFileNameEx(processHandle, hMods[i], szModName, sizeof(szModName) / sizeof(TCHAR)))
-			{
-				wstring wstrModName = szModName;
-				//you will need to change this to the name of the exe of the foreign process
-				wstring wstrModContain = L"flare.exe";
-				if (wstrModName.find(wstrModContain) != string::npos)
-				{
-					return hMods[i];
-				}
-			}
-			else {
-				HandleError();
-				return nullptr;
-			}
-		}
-		// no module found
-		wcout << L"no moudle found" << endl;
-		CloseHandle(processHandle);
-	}
-	else {
-		HandleError();
-		return nullptr;
-	}
-	return nullptr;
-}
-
 int main(int argc, char** argv) {
-	/* get window handle of Flare.exe. */
-	HWND windowHandle = FindWindow(NULL, L"Flare");
-	if (windowHandle == NULL) {
-		HandleError();
-		return -1;
+	/* Open Process Flare.exe */
+	LPCWSTR ProcessName = L"flare.exe";
+	ProcessManager pManager;
+	pManager.OpenProcessByProcessName(ProcessName);
+	if (pManager.GetProcess() == NULL) {
+		return 0;
 	}
-	wcout << "window found" << endl;
 
-	/* get PID of Flare.exe. */
-	DWORD pid = 0;
-	if (!GetWindowThreadProcessId(windowHandle, &pid)) {
-		HandleError();
-		return -2;
-	}
-	wcout << L"PID :" + to_wstring(pid) << endl;
-
-	/* get process handle of Flare.exe. */
-	HANDLE hProcess = OpenProcess(PROCESS_ALL_ACCESS, true, pid);
-	if (hProcess == NULL) {
-		HandleError();
-		return -3;
-	}
 	/* get base address of process Flare.exe. */
-	HMODULE module = getModule(hProcess);
-	DWORD64 BaseAddress = (DWORD64)module;
-	wcout << hex << L"Base Address :" + to_wstring(BaseAddress) << endl;
+	LPCWSTR ModuleName = L"flare.exe";
+	DWORD64 BaseAddress = pManager.Get64BitBaseAddress(ModuleName);
 	
 	/* Adjust player position. */
 	DWORD64 PlayerPosxAddress;
-	float PlayerPosx;
 	DWORD64 PlayerPosyAddress;
+	float PlayerPosx;
 	float PlayerPosy;
-
 	SIZE_T bytes_read = 0;
+	
+	HANDLE hProcess = pManager.GetProcess();
+	while (1) {
+		pManager.ReadProcess(BaseAddress + 0x00189750, &PlayerPosxAddress);
+		PlayerPosyAddress = PlayerPosxAddress;
 
-	ReadProcessMemory(hProcess, (LPCVOID)(BaseAddress + 0x00189750), &PlayerPosxAddress, sizeof(PlayerPosxAddress), &bytes_read);
-	PlayerPosyAddress = PlayerPosxAddress;
-	PlayerPosxAddress = PlayerPosxAddress + 0x3D0;
-	ReadProcessMemory(hProcess, (LPCVOID)(PlayerPosxAddress), &PlayerPosx, sizeof(PlayerPosx), &bytes_read);
-	PlayerPosyAddress = PlayerPosyAddress + 0x3CC;
-	ReadProcessMemory(hProcess, (LPCVOID)(PlayerPosyAddress), &PlayerPosy, sizeof(PlayerPosy), &bytes_read);
-	wcout << hex << to_wstring(PlayerPosx) << endl;
-	wcout << hex << to_wstring(PlayerPosy) << endl;
+		/* Read player position x-axis coordinate */
+		PlayerPosxAddress = PlayerPosxAddress + 0x3D0;
+		pManager.ReadProcess(PlayerPosxAddress, &PlayerPosx);
+
+		/* Read player position y-axis coordinate */
+		PlayerPosyAddress = PlayerPosyAddress + 0x3CC;
+		pManager.ReadProcess(PlayerPosyAddress, &PlayerPosy);
+		
+		wprintf(L"=======================\n");
+		wprintf(L"player pos x :%f\n", PlayerPosx);
+		wprintf(L"player pos y :%f\n", PlayerPosy);
+		wprintf(L"=======================\n");
+
+		Sleep(1000);
+	}
 	/*
 	if (~ReadProcessMemory(hProcess, (LPCVOID)(0x22095EB3670), &PlayerPosxAddress, sizeof(PlayerPosxAddress), &bytes_read)) {
 		HandleError();
@@ -153,5 +70,7 @@ int main(int argc, char** argv) {
 	//SIZE_T bytes_written = 0;
 	//WriteProcessMemory(process, (LPVOID)gold_address, &new_gold_value, 4, &bytes_written);
 	
+	pManager.CloseProcess();
+
 	return 0;
 }
